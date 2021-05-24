@@ -1,13 +1,23 @@
 ﻿using System;
 
+Main();
 
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
-Console.WriteLine();
+void Main() /* "wrapping" code in a function */
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
 
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
-// {message} is replaced with the string that is passed in when function is called
+    MooseSays("H I, I'M  E N T H U S I A S T I C !");
+    MooseSays("I really am enthusiastic");
+    // {message} is replaced with the string that is passed in when function is called
+
+    //call all functions to run
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
+}
 
 
 
@@ -131,8 +141,3 @@ void SecretQuestion()
     }
 }
 
-//call all functions to run
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
