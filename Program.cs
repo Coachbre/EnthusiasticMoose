@@ -75,5 +75,13 @@ MooseSays("I really am enthusiastic");
 
 bool isTrue = MooseAsks("Is Canada real?");
 // {question} is replaced with string passed into the function
-Console.WriteLine(isTrue);
-// console prints question/boolean
+if(isTrue)// console prints question/boolean
+{
+    MooseSays("Really? It seems very unlikely.");
+    //Runs MooseSays() with specific string in the {message} field as a response to question being true ('Y' answer)
+}
+else 
+{
+    MooseSays("I  K N E W  I T !!!");
+    //Runs MooseSays() with this string if users answer is 'N'
+};
