@@ -5,10 +5,11 @@ Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
 Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
 
-void MooseSays()
+void MooseSays(string message)
 {
     // @ is added in front of the string to allow a multi line string
-    Console.WriteLine(@"
+    // $ enables string interpolation
+    Console.WriteLine($@"
 
                                       _.--^^^--,
                                     .'          `\
@@ -26,7 +27,7 @@ void MooseSays()
                '-'    | /       \ |
                       |  .-. .-.  |
                       \ / o| |o \ /
-                       |   / \   |    H I, I'M  E N T H U S I A S T I C !
+                       |   / \   |    {message}
                       / `^`   `^` \
                      /             \
                     | '._.'         \
@@ -40,4 +41,6 @@ void MooseSays()
                     ");
 }
 
-MooseSays();
+MooseSays("H I, I'M  E N T H U S I A S T I C !");
+MooseSays("I really am enthusiastic");
+// {message} is replaced with the string that is passed in when function is called
