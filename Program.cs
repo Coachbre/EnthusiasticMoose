@@ -5,6 +5,30 @@ Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
 Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
 
+MooseSays("H I, I'M  E N T H U S I A S T I C !");
+MooseSays("I really am enthusiastic");
+// {message} is replaced with the string that is passed in when function is called
+
+
+
+void CanadaQuestion()
+{
+    bool isTrue = MooseAsks("Is Canada real?");
+    // {question} is replaced with string passed into the function
+    if (isTrue)// console prints question/boolean
+    {
+        MooseSays("Really? It seems very unlikely.");
+        //Runs MooseSays() with specific string in the {message} field as a response to question being true ('Y' answer)
+    }
+    else
+    {
+        MooseSays("I  K N E W  I T !!!");
+        //Runs MooseSays() with this string if users answer is 'N'
+    }
+}
+
+
+
 void MooseSays(string message)
 {
     // @ is added in front of the string to allow a multi line string
@@ -63,25 +87,52 @@ bool MooseAsks(string question)
     }
     else
     {
-        return  false;
+        return false;
     }
     //if answer is equal to "y" then return true. If not, return false
 }
 
-
-MooseSays("H I, I'M  E N T H U S I A S T I C !");
-MooseSays("I really am enthusiastic");
-// {message} is replaced with the string that is passed in when function is called
-
-bool isTrue = MooseAsks("Is Canada real?");
-// {question} is replaced with string passed into the function
-if(isTrue)// console prints question/boolean
+void EnthusiasticQuestion()
 {
-    MooseSays("Really? It seems very unlikely.");
-    //Runs MooseSays() with specific string in the {message} field as a response to question being true ('Y' answer)
+    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+    if (isEnthusiastic)
+    {
+        MooseSays("Yay!");
+    }
+    else
+    {
+        MooseSays("You should try it!");
+    }
 }
-else 
+
+void LoveCSharpQuestion()
 {
-    MooseSays("I  K N E W  I T !!!");
-    //Runs MooseSays() with this string if users answer is 'N'
-};
+    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+    if (doesLoveCSharp)
+    {
+        MooseSays("Good job sucking up to your instructor!");
+    }
+    else
+    {
+        MooseSays("You will...oh, yes, you will...");
+    }
+}
+
+void SecretQuestion()
+{
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    if (wantsSecret)
+    {
+        MooseSays("ME TOO!!!! I love secrets...tell me one!");
+    }
+    else
+    {
+        MooseSays("Oh, no...secrets are the best, I love to share them!");
+    }
+}
+
+//call all functions to run
+CanadaQuestion();
+EnthusiasticQuestion();
+LoveCSharpQuestion();
+SecretQuestion();
